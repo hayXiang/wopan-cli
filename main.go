@@ -19,7 +19,7 @@ func IsContain(items []string, item string) bool {
 func main() {
 	actions := []string{"EmptyRecycleData", "AppQueryUser"}
 	if len(os.Args) < 2 || !IsContain(actions, os.Args[1]) {
-		fmt.Printf("please action method: %s", actions)
+		fmt.Printf("please action method: %s\n", actions)
 		return
 	}
 
@@ -42,9 +42,9 @@ func main() {
 	} else if action == "AppQueryUser" {
 		res, err := w.AppQueryUser()
 		if err != nil {
-			fmt.Printf("AppQueryUser() error = %v", err)
+			fmt.Printf("AppQueryUser() error = %v\n", err)
 		} else {
-			fmt.Printf("AppQueryUser() = %+v", res)
+			fmt.Printf("AppQueryUser() = %+v\n", res)
 		}
 	} else {
 		fmt.Println("[ERROR] not suppport action")
